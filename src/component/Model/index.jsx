@@ -25,7 +25,7 @@ const Model = ({ isToggle, texture }) => {
   const positionInfo = [
     [40, -60, 0],
     [-20, 30, 0],
-    [0, -50, 0],
+    [0, -70, 0],
   ]
   
   useEffect(() => {
