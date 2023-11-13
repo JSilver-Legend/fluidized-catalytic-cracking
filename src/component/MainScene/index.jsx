@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense, useState } from 'react'
+import React, { Fragment, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 
 import CanvasEnv from '../CanvasEnv'
@@ -6,12 +6,11 @@ import Model from '../Model'
 import ControlPanel from '../ControlPanel'
 
 const MainScene = () => {    
-  const [isToggle, setIsToggle] = useState(false)
-  const [texture, setTexture] = useState('white')
     
+
   return (
     <Fragment>
-        <ControlPanel isToggle={isToggle} setIsToggle={setIsToggle} setTexture={setTexture} />
+        <ControlPanel />
         <Canvas
             style={{ backgroundColor : '#333333', height: '100vh' }}
             camera={{
@@ -24,7 +23,7 @@ const MainScene = () => {
             shadows
             >
             <Suspense fallback={null}>
-                <Model isToggle={isToggle} texture={texture} />
+                <Model />
             </Suspense>
             <CanvasEnv />
         </Canvas>
