@@ -14,7 +14,7 @@ const MainScene = () => {
         <Canvas
             style={{ backgroundColor : '#333333', height: '100vh' }}
             camera={{
-                position: [0, 0, 200],
+                position: [0, 50, 250],
                 aspect: window.innerWidth / window.innerHeight,
                 fov: 45,
                 near: 0.1,
