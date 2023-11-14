@@ -1,3 +1,4 @@
+import * as THREE from 'three'
 import React, { useEffect } from 'react'
 import { useLoader, useThree } from '@react-three/fiber'
 import { useSelector } from 'react-redux'
@@ -15,11 +16,20 @@ const Model = ({ isToggle, texture }) => {
   const model_0 = useLoader(GLTFLoader, '/assets/model/0.glb')
   const model_1 = useLoader(GLTFLoader, '/assets/model/1.glb')
   const model_2 = useLoader(GLTFLoader, '/assets/model/2.glb')
+  const model_3_4 = useLoader(GLTFLoader, '/assets/model/3-4.glb')
+  const model_5 = useLoader(GLTFLoader, '/assets/model/5.glb')
+  const model_6 = useLoader(GLTFLoader, '/assets/model/6.glb')
+  const model_7 = useLoader(GLTFLoader, '/assets/model/7.glb')
   
   const model = [
     model_0,
     model_1,
     model_2,
+    // model_3_4,
+    // model_3_4,
+    // model_5,
+    // model_6,
+    // model_7,
   ]
 
   const positionInfo = [
@@ -27,17 +37,6 @@ const Model = ({ isToggle, texture }) => {
     [-20, 30, 0],
     [0, -70, 0],
   ]
-  
-  useEffect(() => {
-    gsap.to(camera, {
-      onStart: () => {
-      },
-      
-    })
-    if (modelIndex === 0) {
-
-    }
-  }, [modelIndex])
   
   return (
     <group>
