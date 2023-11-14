@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { DoubleSide } from 'three'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Instances } from '@react-three/drei'
 
 const Model2 = () => {
     const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
@@ -22,28 +23,34 @@ const Model2 = () => {
           <mesh geometry={body.nodes.body.geometry}>
             <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
           </mesh>
-          <mesh geometry={ring.nodes.ring.geometry} position={[0, 24, 200]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.99, 1, 0.99]}>
+          <mesh geometry={ring.nodes.ring.geometry} position={[0, 0, 3300]}>
             <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
           </mesh>
-          <mesh geometry={top_tap.nodes.top_tap.geometry} position={[0, 0, 3450]}>
+          <mesh geometry={top_tap.nodes.top_tap.geometry}>
             <meshStandardMaterial side={DoubleSide} color={interiorView ? '#3F4F6D' : 'white'} roughness={0.5} metalness={0.9} />
           </mesh>
         </group>
 
         {interiorView && 
           <group>
-            <mesh geometry={pillar_1.nodes.pillar_1.geometry} position={[-175, 0, 200]}>
+            <mesh geometry={pillar_1.nodes.pillar_1.geometry} position={[-170, 0, 60]}>
               <meshStandardMaterial side={DoubleSide} color='#743A25' roughness={0.5} metalness={0.9} />
             </mesh>
-            <mesh geometry={pillar_2.nodes.pillar_2.geometry} position={[175, 0, 200]}>
+            <mesh geometry={pillar_2.nodes.pillar_2.geometry} position={[170, 0, 60]}>
               <meshStandardMaterial side={DoubleSide} color='#743A25' roughness={0.5} metalness={0.9} />
             </mesh>
-            <mesh geometry={filter_case.nodes.filter_case.geometry} position={[0, 0, 3200]} rotation={[0, 0, Math.PI]}>
-              <meshStandardMaterial side={DoubleSide} color='#274A77' roughness={0.5} metalness={0.9} />
-            </mesh>
-            <mesh geometry={filter_route.nodes.filter_route.geometry} position={[0, 0, 3200]} rotation={[0, 0, Math.PI]}>
-              <meshStandardMaterial side={DoubleSide} color='#854A34' roughness={0.5} metalness={0.9} />
-            </mesh>
+            <group position={[0, 0, 530]}>
+              {new Array(40).fill('').map((_, index) => (
+                <group key={index} position={[0, 0, index * 71]} rotation={[0, 0, index % 2 === 0 ? 0 : Math.PI]}>
+                  <mesh geometry={filter_case.nodes.filter_case.geometry}>
+                    <meshStandardMaterial side={DoubleSide} color='#274A77' roughness={0.5} metalness={0.9} />
+                  </mesh>
+                  <mesh geometry={filter_route.nodes.filter_route.geometry} position={[0, 0, 5]}>
+                    <meshStandardMaterial side={DoubleSide} color='#854A34' roughness={0.5} metalness={0.9} />
+                  </mesh>
+                </group>
+              ))}
+            </group>
           </group>
         }
     </group>

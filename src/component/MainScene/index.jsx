@@ -12,7 +12,7 @@ const MainScene = () => {
     <Fragment>
         <ControlPanel />
         <Canvas
-            style={{ backgroundColor : '#333333', height: '100vh' }}
+            style={{ backgroundColor : '#444444', height: '100vh' }}
             camera={{
                 position: [0, 50, 250],
                 aspect: window.innerWidth / window.innerHeight,
