@@ -11,24 +11,24 @@ const Model = () => {
   const model_0 = useLoader(GLTFLoader, '/assets/model/0.glb')
   const model_1 = useLoader(GLTFLoader, '/assets/model/1.glb')
   const model_2 = useLoader(GLTFLoader, '/assets/model/2.glb')
-  // const model_3_4 = useLoader(GLTFLoader, '/assets/model/3-4.glb')
-  // const model_5 = useLoader(GLTFLoader, '/assets/model/5.glb')
-  // const model_6 = useLoader(GLTFLoader, '/assets/model/6.glb')
-  // const model_7 = useLoader(GLTFLoader, '/assets/model/7.glb')
+  const model_3_4 = useLoader(GLTFLoader, '/assets/model/3-4.glb')
+  const model_5 = useLoader(GLTFLoader, '/assets/model/5.glb')
+  const model_6 = useLoader(GLTFLoader, '/assets/model/6.glb')
+  const model_7 = useLoader(GLTFLoader, '/assets/model/7.glb')
   
   const model = [
     model_0,
     model_1,
     model_2,
-    // model_3_4,
-    // model_3_4,
-    // model_5,
-    // model_6,
-    // model_7,
+    model_3_4,
+    model_3_4,
+    model_5,
+    model_6,
+    model_7,
   ]
 
   const positionInfo = [
-    [30, -50, 0],
+    [50, -50, 50],
     [-20, 30, 0],
     [0, -70, 0],
     [0, -60, 0],
@@ -39,7 +39,7 @@ const Model = () => {
   ]
 
   const scaleInfo = [
-    [0.018, 0.018, 0.018],
+    [0.016, 0.016, 0.016],
     [0.025, 0.025, 0.025],
     [0.025, 0.025, 0.025],
     [0.1, 0.1, 0.1],
