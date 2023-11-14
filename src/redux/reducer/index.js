@@ -10,7 +10,7 @@ const modelConfigSlice = createSlice({
     reducers: {
         setModelIndex: (state, action) => {
             state.modelIndex = action.payload;
-        }
+        },
     }
 })
 

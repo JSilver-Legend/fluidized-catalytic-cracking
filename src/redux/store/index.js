@@ -3,7 +3,7 @@ import modelConfigReducer from '../reducer/index'
 
 const store = configureStore({
     reducer: {
-        modelConfig: modelConfigReducer
+        modelConfig: modelConfigReducer,
     }
 })
 
