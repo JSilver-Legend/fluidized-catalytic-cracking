@@ -7,16 +7,27 @@ import gsap from 'gsap';
 const CanvasEnv = () => {
   const orbitCam = useRef();
   const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
+
+  const cameraPosZ = [
+    800,
+    450,
+    300,
+    150,
+    150,
+    200,
+    250,
+    300,
+  ]
   
   useEffect(() => {
     if (orbitCam.current) {
       const camera = orbitCam.current.object;
-      camera.position.set(0, 0, 300);
+      camera.position.set(0, 0, 500);
       orbitCam.current.target = new THREE.Vector3(0, 0, 0);
 
       gsap.to(camera.position, {
         duration: 1,
-        z: 250,
+        z: cameraPosZ[modelIndex],
       })
     }
   }, [modelIndex, orbitCam.current])
@@ -24,12 +35,13 @@ const CanvasEnv = () => {
   return (
     <group>
         <OrbitControls ref={orbitCam} />
-        <directionalLight position={[100, 100, 100]} intensity={2} />
-        <directionalLight position={[100, 100, -100]} intensity={1} />
-        <directionalLight position={[-100, 100, -100]} intensity={1} />
-        <directionalLight position={[-100, 100, 100]} intensity={1} />
-        <ambientLight intensity={0.5} />
-        <gridHelper args={[1000, 50, 0x999999, 0x555555]} position={[0, -80, 0]} />
+        <directionalLight position={[1000, 1000, 1000]} intensity={2} />
+        <directionalLight position={[1000, 1000, -1000]} intensity={1} />
+        <directionalLight position={[-1000, 1000, -1000]} intensity={1} />
+        <directionalLight position={[-1000, 1000, 1000]} intensity={1} />
+        <ambientLight intensity={2} />
+        <gridHelper args={[5000, 100, 0x666666, 0x444444]} position={[0, -250, 0]} />
+        {/* <axesHelper args={[5000, 5000]} /> */}
     </group>
   )
 }

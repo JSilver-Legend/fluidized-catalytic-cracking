@@ -1,64 +1,25 @@
-import React, { useEffect } from 'react'
-import { useLoader } from '@react-three/fiber'
-import { useSelector } from 'react-redux'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import React from 'react'
 
 import './style.css'
 
-const Model = () => {  
-  const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
-  
-  const model_0 = useLoader(GLTFLoader, '/assets/model/0.glb')
-  const model_1 = useLoader(GLTFLoader, '/assets/model/1.glb')
-  const model_2 = useLoader(GLTFLoader, '/assets/model/2.glb')
-  const model_3_4 = useLoader(GLTFLoader, '/assets/model/3-4.glb')
-  const model_5 = useLoader(GLTFLoader, '/assets/model/5.glb')
-  const model_6 = useLoader(GLTFLoader, '/assets/model/6.glb')
-  const model_7 = useLoader(GLTFLoader, '/assets/model/7.glb')
-  
-  const model = [
-    model_0,
-    model_1,
-    model_2,
-    model_3_4,
-    model_3_4,
-    model_5,
-    model_6,
-    model_7,
-  ]
+import Model1 from './Model1'
+import Model2 from './Model2'
+import Model3 from './Model3'
+import Model4 from './Model4'
+import Model5 from './Model5'
+import Model6 from './Model6'
+import Model7 from './Model7'
 
-  const positionInfo = [
-    [50, -50, 50],
-    [-20, 30, 0],
-    [0, -70, 0],
-    [0, -60, 0],
-    [0, -60, 0],
-    [0, -75, 0],
-    [0, -70, 0],
-    [0, -70, 0],
-  ]
-
-  const scaleInfo = [
-    [0.016, 0.016, 0.016],
-    [0.025, 0.025, 0.025],
-    [0.025, 0.025, 0.025],
-    [0.1, 0.1, 0.1],
-    [0.1, 0.1, 0.1],
-    [0.055, 0.055, 0.055],
-    [0.05, 0.05, 0.05],
-    [0.045, 0.045, 0.045],
-  ]
-  
+const Model = () => {    
   return (
     <group>
-      <mesh
-        geometry={model[modelIndex].nodes.model.geometry}
-        position={positionInfo[modelIndex]}
-        scale={scaleInfo[modelIndex]}
-        rotation={[-Math.PI / 2, 0, 0]}
-      >
-        <meshStandardMaterial color='white' roughness={0.5} metalness={0.9} />
-      </mesh>
+      <Model1 />
+      <Model2 />
+      <Model3 />
+      <Model4 />
+      <Model5 />
+      <Model6 />
+      <Model7 />
     </group>
   )
 }

@@ -17,8 +17,8 @@ const MainScene = () => {
                 position: [0, 50, 250],
                 aspect: window.innerWidth / window.innerHeight,
                 fov: 45,
-                near: 0.1,
-                far: 1000
+                near: 1,
+                far: 10000
             }}
             shadows
             >

@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react'
-import { useDispatch } from 'react-redux'
-import { setModelIndex } from '../../redux/reducer'
+import { useDispatch, useSelector } from 'react-redux'
+import { setInteiorView, setModelIndex } from '../../redux/reducer'
 
 const ControlPanel = () => { 
   const dispatch = useDispatch()
+  const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
+  const interiorView = useSelector((state) => state.modelConfig.interiorView)
   
   const handleButton = (value) => {
     dispatch(setModelIndex(value));    
@@ -11,7 +13,7 @@ const ControlPanel = () => {
   
   return (
     <Fragment>
-      <div className='control-panel'>
+      <div className='select-model-section'>
         <label className='label'>Select model</label>
         <button className='button' onClick={() => handleButton(0)}>All</button>
         <button className='button' onClick={() => handleButton(1)}>1</button>
@@ -21,6 +23,15 @@ const ControlPanel = () => {
         <button className='button' onClick={() => handleButton(5)}>5</button>
         <button className='button' onClick={() => handleButton(6)}>6</button>
         <button className='button' onClick={() => handleButton(7)}>7</button>
+      </div>
+      <div className='interior-view-section'>
+          <button
+            className='button'
+            onClick={() => dispatch(setInteiorView())}
+            disabled={(modelIndex === 0 || modelIndex === 2) ? false : true}
+          >
+            {interiorView ? 'Exterior View' : 'Interior View'}
+          </button>
       </div>
     </Fragment>
   )
