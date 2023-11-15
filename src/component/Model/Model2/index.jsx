@@ -13,14 +13,10 @@ const Model2 = () => {
     const filter_route = useLoader(GLTFLoader, '/assets/model/2/filter_route.glb')
 
   return (modelIndex === 0 || modelIndex === 2) && (
-    <group position={modelIndex === 0 ? [100, -140, 100] : [0, -90, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
+    <group position={modelIndex === 0 ? [100, -160, 100] : [0, -90, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
         <group>
           <mesh name='body' geometry={body.nodes.body.geometry}>
             <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
-          </mesh>
-          <mesh name='top-tap' position={[0, 0, 3545]} rotation={[Math.PI / 2, 0, 0]}>
-            <cylinderGeometry args={[25, 25, 100, 20, 1]} />
-            <meshStandardMaterial side={DoubleSide} color={interiorView ? '#3F4F6D' : 'white'} roughness={0.5} metalness={0.9} />
           </mesh>
         </group>
 
