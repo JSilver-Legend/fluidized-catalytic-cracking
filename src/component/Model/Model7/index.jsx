@@ -11,9 +11,9 @@ const Model7 = () => {
     const model = useLoader(GLTFLoader, '/assets/model/7/model.glb')
     
   return (modelIndex === 0 || modelIndex === 7) && (
-    <group position={modelIndex === 0 ? [-600, -200, -170] : [0, -95, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
+    <group position={modelIndex === 0 ? [-700, -200, -170] : [0, -95, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
         <mesh geometry={model.nodes.model.geometry}>
-            <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} />
+            <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
         </mesh>
     </group>
   )
