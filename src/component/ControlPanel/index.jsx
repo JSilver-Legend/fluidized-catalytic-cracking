@@ -28,7 +28,6 @@ const ControlPanel = () => {
           <button
             className='button'
             onClick={() => dispatch(setInteiorView())}
-            disabled={(modelIndex === 0 || modelIndex === 2) ? false : true}
           >
             {interiorView ? 'Exterior View' : 'Interior View'}
           </button>

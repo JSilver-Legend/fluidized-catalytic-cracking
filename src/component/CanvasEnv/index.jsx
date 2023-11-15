@@ -14,9 +14,9 @@ const CanvasEnv = () => {
     300,
     150,
     100,
-    200,
+    110,
     250,
-    300,
+    200,
   ]
   
   useEffect(() => {
@@ -40,7 +40,7 @@ const CanvasEnv = () => {
         <directionalLight position={[-1000, 1000, -1000]} intensity={1} />
         <directionalLight position={[-1000, 1000, 1000]} intensity={1} />
         <ambientLight intensity={2} />
-        <gridHelper args={[5000, 100, 0x666666, 0x555555]} position={[0, -250, 0]} />
+        <gridHelper args={[5000, 100, 0x888888, 0x555555]} position={[0, -210, 0]} />
         {/* <axesHelper args={[5000, 5000]} /> */}
     </group>
   )

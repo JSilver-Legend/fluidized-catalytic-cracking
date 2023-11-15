@@ -27,9 +27,9 @@ const Model2 = () => {
         {interiorView && 
             <group position={[0, 0, 450]}>
               {new Array(40).fill('').map((_, index) => (
-                <group key={index} position={[0, 0, index * 71]} rotation={[0, 0, index % 2 === 0 ? 0 : Math.PI]}>
+                <group key={`model-2-${index}`} name='filter' position={[0, 0, index * 71]} rotation={[0, 0, index % 2 === 0 ? 0 : Math.PI]}>
                   <mesh name='filter-case' geometry={filter_case.nodes.filter_case.geometry}>
-                    <meshStandardMaterial side={DoubleSide} color='#274A77' roughness={0.5} metalness={0.9} />
+                    <meshStandardMaterial side={DoubleSide} color='#274A77' roughness={0.5} metalness={0.5} />
                   </mesh>
                   <mesh name='filter-route' geometry={filter_route.nodes.filter_route.geometry} position={[0, 0, 5]}>
                     <meshStandardMaterial side={DoubleSide} color='#854A34' roughness={0.5} metalness={0.9} />
