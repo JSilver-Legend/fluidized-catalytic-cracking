@@ -9,7 +9,7 @@ const Model2 = () => {
     const interiorView = useSelector((state) => state.modelConfig.interiorView)
 
     const body = useLoader(GLTFLoader, '/assets/model/2/body.glb')
-    const ring = useLoader(GLTFLoader, '/assets/model/2/ring.glb')
+    // const ring = useLoader(GLTFLoader, '/assets/model/2/ring.glb')
     const filter_case = useLoader(GLTFLoader, '/assets/model/2/filter_case.glb')
     const filter_route = useLoader(GLTFLoader, '/assets/model/2/filter_route.glb')
 
@@ -19,9 +19,9 @@ const Model2 = () => {
           <mesh name='body' geometry={body.nodes.body.geometry}>
             <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
           </mesh>
-          <mesh name='ring' geometry={ring.nodes.ring.geometry} position={[0, 0, 3220]}>
+          {/* <mesh name='ring' geometry={ring.nodes.ring.geometry} position={[0, 0, 3220]}>
             <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
-          </mesh>
+          </mesh> */}
           <mesh name='top-tap' position={[0, 0, 3545]} rotation={[Math.PI / 2, 0, 0]}>
             <cylinderGeometry args={[25, 25, 100, 20, 1]} />
             <meshStandardMaterial side={DoubleSide} color={interiorView ? '#3F4F6D' : 'white'} roughness={0.5} metalness={0.9} />
