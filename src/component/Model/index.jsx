@@ -9,9 +9,7 @@ import Model4 from './Model4'
 import Model5 from './Model5'
 import Model6 from './Model6'
 import Model7 from './Model7'
-import Directions from '../Directions'
-import ArrowModel from './Access/Arrow'
-import Connection from './Access/Connection'
+import Connection from '../Connection'
 
 const Model = () => {    
   return (
@@ -23,8 +21,6 @@ const Model = () => {
       <Model5 />
       <Model6 />
       <Model7 />
-      <Directions />
-      <ArrowModel />
       <Connection />
     </group>
   )
