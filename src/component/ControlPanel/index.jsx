@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setInteiorView, setModelIndex } from '../../redux/reducer'
+import { setInteiorView, setIsConnectionState, setModelIndex } from '../../redux/reducer'
+import { useEffect } from 'react'
 
 const ControlPanel = () => { 
   const dispatch = useDispatch()
   const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
   const interiorView = useSelector((state) => state.modelConfig.interiorView)
+  const isConnectionState = useSelector((state) => state.modelConfig.isConnectionState)
   
   const handleButton = (value) => {
     dispatch(setModelIndex(value));    
@@ -30,6 +32,13 @@ const ControlPanel = () => {
             onClick={() => dispatch(setInteiorView())}
           >
             {interiorView ? 'Exterior View' : 'Interior View'}
+          </button>
+          <button
+            className='button'
+            onClick={() => dispatch(setIsConnectionState())}
+            disabled={modelIndex === 0 ? false : true}
+          >
+            {isConnectionState ? 'Connection Hidden' : 'Connection Show'}
           </button>
       </div>
     </Fragment>
