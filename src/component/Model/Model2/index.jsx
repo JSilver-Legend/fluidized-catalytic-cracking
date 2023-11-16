@@ -13,7 +13,7 @@ const Model2 = () => {
     const filter_route = useLoader(GLTFLoader, '/assets/model/2/filter_route.glb')
 
   return (modelIndex === 0 || modelIndex === 2) && (
-    <group position={modelIndex === 0 ? [100, -160, 100] : [0, -90, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
+    <group position={modelIndex === 0 ? [110, -160, 100] : [0, -90, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
         <group>
           <mesh name='body' geometry={body.nodes.body.geometry}>
             <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />

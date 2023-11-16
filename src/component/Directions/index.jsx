@@ -24,7 +24,7 @@ const Directions = () => {
                 });
             }
         }
-    }, [ref.current, isConnectionState])
+    }, [ref.current, isConnectionState, modelIndex])
     
   return (isConnectionState && modelIndex === 0) && (
     <group ref={ref} position={[15, 157.5, 100]}  rotation={[0, Math.PI / 2, 0]}>
