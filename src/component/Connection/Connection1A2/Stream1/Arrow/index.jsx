@@ -1,21 +1,15 @@
 import React from 'react'
-import { useRef } from 'react'
-import { useSelector } from 'react-redux'
+import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
-import { useEffect } from 'react'
 
 const ArrowModel = () => {
     const arrowRef_1 = useRef();
     const arrowRef_2 = useRef();
     const arrowRef_3 = useRef();
-  
-    const modelIndex = useSelector((state) => state.modelConfig.modelIndex);
-    const isConnectionState = useSelector((state) => state.modelConfig.isConnectionState);
 
     const arrowDuration = 2;
     
     useEffect(() => {
-      if(isConnectionState && modelIndex === 0) {
         if (arrowRef_1.current !== undefined ) {
           gsap.to(arrowRef_1.current.position, {
             duration: arrowDuration,
@@ -67,10 +61,9 @@ const ArrowModel = () => {
             repeat: -1,
           })
         }
-      }
-    }, [arrowRef_1.current, arrowRef_2.current, arrowRef_3.current, isConnectionState, modelIndex])
+    }, [arrowRef_1.current, arrowRef_2.current, arrowRef_3.current])
 
-  return (modelIndex === 0 && isConnectionState) && (
+  return (
     <group>
       <group name='arrow-1' ref={arrowRef_1} position={[-20, 168, 100]} rotation={[0, 0, -Math.PI / 2]} scale={[0.6, 0.6, 0.6]}>
           <mesh position={[0, 35, 0]}>

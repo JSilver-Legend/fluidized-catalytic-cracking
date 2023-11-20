@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setInteiorView, setIsConnectionState, setModelIndex } from '../../redux/reducer'
-import { useEffect } from 'react'
+import { setConnectionState, setInteiorView, setModelIndex } from '../../redux/reducer'
 
 const ControlPanel = () => { 
   const dispatch = useDispatch()
   const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
   const interiorView = useSelector((state) => state.modelConfig.interiorView)
-  const isConnectionState = useSelector((state) => state.modelConfig.isConnectionState)
+  const connectionState = useSelector((state) => state.modelConfig.connectionState)
+  console.log('connectionState: ', connectionState);
   
   const handleButton = (value) => {
     dispatch(setModelIndex(value));    
@@ -33,13 +33,15 @@ const ControlPanel = () => {
           >
             {interiorView ? 'Exterior View' : 'Interior View'}
           </button>
-          <button
-            className='button'
-            onClick={() => dispatch(setIsConnectionState())}
-            disabled={modelIndex === 0 ? false : true}
-          >
-            {isConnectionState ? 'Connection Hidden' : 'Connection Show'}
-          </button>
+          {modelIndex === 0 &&
+            <>
+              <hr style={{ width: 100}} />
+              <button className='button' onClick={() => dispatch(setConnectionState(0))} disabled={connectionState === 0 ? true : false}>Connection Hidden</button>
+              <button className='button' onClick={() => dispatch(setConnectionState(1))} disabled={connectionState === 1 ? true : false}>Connection - 1</button>
+              <button className='button' onClick={() => dispatch(setConnectionState(2))} disabled={connectionState === 2 ? true : false}>Connection - 2</button>
+              {/* <button className='button' onClick={() => dispatch(setConnectionState(3))} disabled={connectionState === 3 ? true : false}>Connection - 3</button> */}
+            </>
+          }
       </div>
     </Fragment>
   )

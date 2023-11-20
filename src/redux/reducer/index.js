@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     modelIndex: 0,
     interiorView: false,
-    isConnectionState: false,
+    connectionState: 0,
 }
 
 const modelConfigSlice = createSlice({
@@ -16,12 +16,12 @@ const modelConfigSlice = createSlice({
         setInteiorView: (state) => {
             state.interiorView = !state.interiorView;
         },
-        setIsConnectionState: (state) => {
-            state.isConnectionState = !state.isConnectionState;
-        }
+        setConnectionState: (state, action) => {
+            state.connectionState = action.payload;
+        },
     }
 })
 
-export const { setModelIndex, setInteiorView, setIsConnectionState } = modelConfigSlice.actions
+export const { setModelIndex, setInteiorView, setConnectionState } = modelConfigSlice.actions
 
 export default modelConfigSlice.reducer

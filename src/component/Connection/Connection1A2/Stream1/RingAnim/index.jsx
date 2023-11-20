@@ -1,35 +1,29 @@
 import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { DoubleSide } from 'three'
-import { useSelector } from 'react-redux'
-
 const RingAnim = () => {
     const ref = useRef()
-    const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
-    const isConnectionState = useSelector((state) => state.modelConfig.isConnectionState)
 
     const ringOutRadius = 3;
     const ringInnerRadius = ringOutRadius + 0.5;
     const ringColor = '#FFFFFF';
 
     useEffect(() => {
-        if(isConnectionState && modelIndex === 0) {
-            if (ref.current.children !== undefined ) {
-                ref.current.children.forEach((item) => {
-                    item.children.forEach((itemC, index) => {
-                        gsap.to(itemC.material, {
-                            delay: 0.2 * index,
-                            duration: 0.2 * ref.current.children.length,
-                            opacity: 0,
-                            repeat: -1,
-                        })
+        if (ref.current.children !== undefined ) {
+            ref.current.children.forEach((item) => {
+                item.children.forEach((itemC, index) => {
+                    gsap.to(itemC.material, {
+                        delay: 0.2 * index,
+                        duration: 0.2 * ref.current.children.length,
+                        opacity: 0,
+                        repeat: -1,
                     })
-                });
-            }
+                })
+            });
         }
-    }, [ref.current, isConnectionState, modelIndex])
+    }, [ref.current])
     
-  return (modelIndex === 0 && isConnectionState) && (
+  return (
     <group  ref={ref}>
         <group name='section-1' position={[-40.1, 105.5, 100]}>
             {Array.from({length: 10}).map((_, index) => (
