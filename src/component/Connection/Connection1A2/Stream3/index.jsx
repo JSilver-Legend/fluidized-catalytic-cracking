@@ -1,23 +1,58 @@
-import { useLoader } from '@react-three/fiber'
+import * as THREE from 'three'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { DoubleSide } from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 const Stream3 = () => {
     const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
     const interiorView = useSelector((state) => state.modelConfig.interiorView)
-
-    const stream = useLoader(GLTFLoader, '/assets/model/access/connection_1_2/stream_3.glb')
-    console.log('stream: ', stream);
     
-  return (modelIndex === 0 || modelIndex === 1) && (
-    <group position={modelIndex === 0 ? [-100, 0, 100] : [-30, 40, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
-        <mesh geometry={stream.nodes.stream_model.geometry}>
-            <meshStandardMaterial side={DoubleSide} color='white' roughness={0.5} metalness={0.9} opacity={interiorView ? 0.1 : 1} transparent />
-        </mesh>
+  return (
+    <group position={[0, 0, 0]} rotation={[0, 0, 0]}>
+        <StreamPath />
     </group>
   )
 }
 
 export default Stream3
+
+const StreamPath = () => {
+    const pathLine = () => {
+        const line = new THREE.Path();
+        line.moveTo(-40, 100);
+        Array.from({length: 20}).map((_, index) => {
+        line.lineTo(-40, 100 + index * 2);
+        })
+        // line.lineTo(-40, 140);
+        line.quadraticCurveTo(-40, 157, -25, 157)
+        Array.from({length: 32}).map((_, index) => {
+        line.lineTo(-25 + 2 * index, 157);
+        })
+        // line.lineTo(40, 157);
+        line.quadraticCurveTo(54.5, 157, 54.5, 140)
+        Array.from({length: 138}).map((_, index) => {
+        line.lineTo(54.5, 140 - index * 2);
+        })
+        // line.lineTo(54.5, -135);
+        line.quadraticCurveTo(54.5, -148, 65, -148);
+        Array.from({length: 18}).map((_, index) => {
+        line.lineTo(65 + 2 * index, -148);
+        })
+        // line.lineTo(100, -148);
+
+        return line;
+    }
+
+    const points = pathLine().getPoints();
+    const routeGeo = new THREE.BufferGeometry().setFromPoints(points);
+
+    return (
+        <group position={[0, 0, 100]}>
+        <line geometry={routeGeo}>
+            <lineBasicMaterial color={'red'} />
+        </line>
+        {/* <Electron points={points} /> */}
+        </group>
+    )
+}
+  

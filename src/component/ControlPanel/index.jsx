@@ -39,7 +39,6 @@ const ControlPanel = () => {
               <button className='button' onClick={() => dispatch(setConnectionState(0))} disabled={connectionState === 0 ? true : false}>Connection Hidden</button>
               <button className='button' onClick={() => dispatch(setConnectionState(1))} disabled={connectionState === 1 ? true : false}>Connection - 1</button>
               <button className='button' onClick={() => dispatch(setConnectionState(2))} disabled={connectionState === 2 ? true : false}>Connection - 2</button>
-              {/* <button className='button' onClick={() => dispatch(setConnectionState(3))} disabled={connectionState === 3 ? true : false}>Connection - 3</button> */}
             </>
           }
       </div>
