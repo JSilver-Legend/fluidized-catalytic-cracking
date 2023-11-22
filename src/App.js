@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import MainScene from './component/MainScene';
+
+import Component from './component';
 
 function App() {
   return (
     <div className="App">      
-      <MainScene />
+      <Component />
     </div>
   );
 }
