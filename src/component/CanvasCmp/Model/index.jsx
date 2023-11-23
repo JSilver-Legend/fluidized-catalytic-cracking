@@ -16,12 +16,12 @@ const Model = () => {
     <group castShadow receiveShadow>
       {/* <Model1 /> */}
       <Model2 />
-      {/* <Model3 />
+      <Model3 />
       <Model4 />
       <Model5 />
       <Model6 />
-      <Model7 /> */}
-      <Connection />
+      <Model7 />
+      {/* <Connection /> */}
     </group>
   )
 }

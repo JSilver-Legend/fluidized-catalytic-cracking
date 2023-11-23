@@ -16,7 +16,7 @@ const Model2 = () => {
     TextureAnisotropy(gl, texture);
 
   return (modelIndex === 0 || modelIndex === 2) && (
-    <group castShadow position={modelIndex === 0 ? [110, -160, 100] : [0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
+    <group castShadow position={modelIndex === 0 ? [110, 20, 100] : [0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
         <mesh castShadow name='body' geometry={body.nodes.body.geometry}>
           <meshStandardMaterial map={texture} bumpMap={texture} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.4 : 1} transparent />
         </mesh>
@@ -29,7 +29,6 @@ const Model2 = () => {
 export default Model2
 
 const InteriorObj = ({ interiorView }) => {
-  console.log('interiorView: ', interiorView);
   const filter_case = useLoader(GLTFLoader, '/assets/model/2/filter_case.glb')
   const filter_route = useLoader(GLTFLoader, '/assets/model/2/filter_route.glb')
 

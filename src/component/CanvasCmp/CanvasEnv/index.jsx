@@ -20,14 +20,14 @@ const CanvasEnv = () => {
         <directionalLight position={[-3000, 100, -3000]} intensity={0.5} />
         <ambientLight intensity={0.1} />
 
-        <Environment preset='city' background blur={0.7} far={100} />
+        <Environment preset='sunset' background blur={1} far={100} />
         <CameraControls
           ref={cameraControlsRef}
           dollyToCursor={true}
           maxDistance={2000}
         />
 
-        <axesHelper args={[5000, 5000]} />
+        {/* <axesHelper args={[5000, 5000]} /> */}
 
         <Ground />
     </>
