@@ -13,7 +13,7 @@ const Component = () => {
         <Canvas
             style={{ height: '100vh' }}
             camera={{
-                position: [0, 50, 250],
+                position: [0, 140, 550],
                 aspect: window.innerWidth / window.innerHeight,
                 fov: 45,
                 near: 0.1,

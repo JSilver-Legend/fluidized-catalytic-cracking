@@ -18,7 +18,7 @@ const Model6 = () => {
   return (modelIndex === 0 || modelIndex === 6) && (
     <group castShadow position={modelIndex === 0 ? [-300, 0, -110] : [0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[0.05, 0.05, 0.05]}>
       <mesh castShadow geometry={body.nodes.body.geometry}>
-          <meshStandardMaterial map={texture} bumpMap={texture} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.4 : 1} transparent />
+          <meshStandardMaterial map={texture} bumpMap={texture} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
       </mesh>
 
       <InteriorObj interiorView={interiorView} />

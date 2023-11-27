@@ -14,7 +14,7 @@ import Connection from './Connection'
 const Model = () => {    
   return (
     <group castShadow receiveShadow>
-      {/* <Model1 /> */}
+      <Model1 />
       <Model2 />
       <Model3 />
       <Model4 />
