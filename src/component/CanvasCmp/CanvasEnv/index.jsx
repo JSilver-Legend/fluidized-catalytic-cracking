@@ -39,6 +39,8 @@ const CanvasEnv = () => {
           ref={cameraControlsRef}
           dollyToCursor={true}
           maxDistance={2000}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={0}
         />
 
         {/* <axesHelper args={[5000, 5000]} /> */}

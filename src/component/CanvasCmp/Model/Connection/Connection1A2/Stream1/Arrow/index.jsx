@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
+import { useSelector } from 'react-redux';
 
 const ArrowModel = () => {
     const arrowRef_1 = useRef();
     const arrowRef_2 = useRef();
     const arrowRef_3 = useRef();
 
+    const modelIndex = useSelector((state) => state.modelConfig.modelIndex)
+    const interiorView = useSelector((state) => state.modelConfig.interiorView)
+    const connectionState = useSelector((state) => state.modelConfig.connectionState);
+    
     const arrowDuration = 2;
     
-    useEffect(() => {
+    useEffect(() => {      
         if (arrowRef_1.current !== undefined ) {
           gsap.to(arrowRef_1.current.position, {
             duration: arrowDuration,
-            x: arrowRef_1.current.position.x + 30,
+            x: arrowRef_1.current.position.x + 25,
             repeat: -1,
           })
           gsap.to(arrowRef_1.current.children[0].material, {
@@ -61,7 +66,14 @@ const ArrowModel = () => {
             repeat: -1,
           })
         }
-    }, [arrowRef_1.current, arrowRef_2.current, arrowRef_3.current])
+    }, [])
+
+    useEffect(() => {
+      arrowRef_1.current.position.x = 43;
+      arrowRef_2.current.position.y = 230;
+      arrowRef_3.current.position.y = 130;
+    }, [modelIndex, interiorView, connectionState])
+    
 
   return (
     <group>

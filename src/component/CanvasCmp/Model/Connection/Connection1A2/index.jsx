@@ -7,8 +7,8 @@ import ConnectionModel from './ConnectionModel'
 
 const Connection1A2 = () => {
   const modelIndex = useSelector((state) => state.modelConfig.modelIndex);
-  const connectionState = useSelector((state) => state.modelConfig.connectionState);
   const interiorView = useSelector((state) => state.modelConfig.interiorView);
+  const connectionState = useSelector((state) => state.modelConfig.connectionState);
 
   return (
     <group castShadow receiveShadow>
