@@ -96,8 +96,8 @@ const ControlPanel = () => {
             aria-label='conection-state'
             orientation='vertical'
           >
-              <ToggleButton value='1' aria-label='interior-view'>Connection 1</ToggleButton>
-              <ToggleButton value='2' aria-label='interior-view'>Connection 2</ToggleButton>
+              <ToggleButton value='1' aria-label='interior-view'>Stream 1</ToggleButton>
+              <ToggleButton value='2' aria-label='interior-view'>Stream 2</ToggleButton>
           </ToggleButtonGroup>
         </div>
         }
