@@ -37,116 +37,113 @@ const Model1 = () => {
             <meshStandardMaterial map={mat_1_body} bumpMap={mat_1_body} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
         </mesh>
         <mesh geometry={model.nodes['1_bottom_load'].geometry} position={[150, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
-            <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_key_ring_under_001'].geometry} position={[270, 305, 15]} rotation={[0, 0, 0]}>
-            <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_key_ring_under_001_1'].geometry} position={[270, 305, -15]} rotation={[0, 0, 0]}>
-            <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_leg_front'].geometry} position={[-350, 940, 0]} rotation={[0, 0, 0]}>
-            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_route_s_001'].geometry} position={[-200, 2900, 405]} rotation={[-0.8, -0.4, 0]}>
-            <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_route_s_001'].geometry} position={[-300, 80, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-            <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_route_b_001'].geometry} position={[0, 2500, 460]} rotation={[Math.PI, 0, 0]}>
-            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_mid_small_cylinder_001'].geometry} position={[260, 1360, 260]} rotation={[-Math.PI / 2, 0, 0]}>
-            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_mid_small_cylinder_001'].geometry} position={[260, 1360, -260]} rotation={[-Math.PI / 2, 0, 0]}>
-            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_mid_small_cylinder_001'].geometry} position={[-260, 1360, -260]} rotation={[-Math.PI / 2, 0, 0]}>
-            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         <mesh geometry={model.nodes['1_mid_small_cylinder_001'].geometry} position={[-260, 1360, 260]} rotation={[-Math.PI / 2, 0, 0]}>
-            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+            <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
         </mesh>
         
         <group name='right-leg-model'>
           <mesh geometry={model.nodes['1_leg_main_001'].geometry} position={[0, 1000, 450]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_1_leg_main} bumpMap={mat_1_leg_main} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_1_leg_main} bumpMap={mat_1_leg_main} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_connection_001'].geometry} position={[-15, 625, 315]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_connection_upper_001'].geometry} position={[-22, 670, 554.5]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_connection_under_001'].geometry} position={[-34, 650, 538]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_001'].geometry} position={[-55, 655, 310]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_001'].geometry} position={[-55, 655, 560]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_route_s_001'].geometry} position={[-77, 1150, 425]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_route_s_001'].geometry} position={[77, 1150, 425]} rotation={[0, Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
         </group>
         <group name='left-leg-model'>
           <mesh geometry={model.nodes['1_leg_main_001'].geometry} position={[0, 1000, -450]} rotation={[0, Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_1_leg_main} bumpMap={mat_1_leg_main} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_1_leg_main} bumpMap={mat_1_leg_main} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_connection_003'].geometry} position={[-15, 625, -315]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_connection_upper_001'].geometry} position={[-22, 670, -554.5]} rotation={[Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_connection_under_001'].geometry} position={[-34, 650, -538]} rotation={[Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_001'].geometry} position={[-55, 655, -310]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_leg_main_box_001'].geometry} position={[-55, 655, -560]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_route_s_001'].geometry} position={[-77, 1150, -425]} rotation={[0, -Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['1_route_s_001'].geometry} position={[77, 1150, -425]} rotation={[0, Math.PI / 2, 0]}>
-              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_orange} bumpMap={mat_orange} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
         </group>
       </group>
-      <group name='right-model'>    
+      <group name='right-model'>  
           <mesh geometry={model.nodes['2_body'].geometry} position={[1000, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_2_body} bumpMap={mat_2_body} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
-          </mesh>
-          <mesh geometry={model.nodes['2_body'].geometry} position={[1000, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_2_body} bumpMap={mat_2_body} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+                <meshStandardMaterial map={mat_2_body} bumpMap={mat_2_body} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
           </mesh>
           <mesh geometry={model.nodes['2_ring_upper'].geometry} position={[1000, 2300, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['2_ring_mid'].geometry} position={[1000, 1800, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['2_ring_under'].geometry} position={[1000, 1000, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['connection_upper'].geometry} position={[620, 2720, 0]} rotation={[0, 0, 0.4]}>
-              <meshStandardMaterial map={mat_connection_upper} bumpMap={mat_connection_upper} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_connection_upper} bumpMap={mat_connection_upper} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['connection_under'].geometry} position={[620, 500, 0]} rotation={[0, 0, 0]}>
-              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_white} bumpMap={mat_white} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
           <mesh geometry={model.nodes['connection_under_ring'].geometry} position={[620, 500, 0]} rotation={[0, 0, 0]}>
-              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} opacity={interiorView ? 0.3 : 1} transparent />
+              <meshStandardMaterial map={mat_black} bumpMap={mat_black} bumpScale={2} roughness={0.35} metalness={0.1} />
           </mesh>
       </group>
     </group>

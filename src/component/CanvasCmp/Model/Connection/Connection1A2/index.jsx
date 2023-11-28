@@ -11,7 +11,7 @@ const Connection1A2 = () => {
 
   return (
     <group castShadow receiveShadow>
-      {(modelIndex === 0 && connectionState !== 0) && <ConnectionModel />}
+      {(modelIndex === 0) && <ConnectionModel />}
       {(modelIndex === 0 && connectionState === 1) &&  (<Stream1 />)}
       {(modelIndex === 0 && connectionState === 2) &&  (<Stream2 />)}
     </group>

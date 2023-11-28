@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     modelIndex: 0,
     interiorView: false,
-    connectionState: 0,
+    connectionState: 1,
 }
 
 const modelConfigSlice = createSlice({

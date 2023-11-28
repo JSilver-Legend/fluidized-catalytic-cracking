@@ -21,7 +21,7 @@ const Model = () => {
       <Model5 />
       <Model6 />
       <Model7 />
-      {/* <Connection /> */}
+      <Connection />
     </group>
   )
 }

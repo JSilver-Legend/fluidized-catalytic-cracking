@@ -4,9 +4,10 @@ import { DoubleSide } from 'three'
 const RingAnim = () => {
     const ref = useRef()
 
-    const ringOutRadius = 3;
+    const ringOutRadius = 1;
     const ringInnerRadius = ringOutRadius + 0.5;
-    const ringColor = '#FFFFFF';
+    // const ringColor = '#FFFFFF';
+    const ringColor = 'green';
 
     useEffect(() => {
         if (ref.current.children !== undefined ) {
@@ -25,57 +26,57 @@ const RingAnim = () => {
     
   return (
     <group  ref={ref}>
-        <group name='section-1' position={[-40.1, 105.5, 100]}>
+        <group name='section-1' position={[50.2, 243, 100]}>
             {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_1_${index}`} position={[0, 4 * index, 0]} rotation={[Math.PI / 2, 0, 0]}>
+                <mesh key={`connection_section_1_${index}`} position={[0, 1.2 * index, 0]} rotation={[Math.PI / 2, 0, 0]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>
             ))}
         </group>
-        <group name='section-2' position={[-10, 157.6, 100]} rotation={[0, Math.PI / 2, 0]}>
-            {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_2_${index}`} position={[0, 0, 4 * index]}>
+        <group name='section-2' position={[56, 260.3, 100]} rotation={[0, Math.PI / 2, 0]}>
+            {Array.from({length: 25}).map((_, index) => (
+                <mesh key={`connection_section_2_${index}`} position={[0, 0, 1.2 * index]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>
             ))}
         </group>
-        <group name='section-3' position={[15, 157.5, 100]} rotation={[0, Math.PI / 2, 0]}>
-            {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_3_${index}`} position={[0, -15 - 4 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
+        <group name='section-3' position={[50.5, 267, 100]} rotation={[0, Math.PI / 2, 0]}>
+            {Array.from({length: 20}).map((_, index) => (
+                <mesh key={`connection_section_3_${index}`} position={[0, -15 - 1.2 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>
             ))}
         </group>
-        <group name='section-4' position={[15, 90, 100]} rotation={[0, Math.PI / 2, 0]}>
-            {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_4_${index}`} position={[0, -15 - 4 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
+        <group name='section-4' position={[50.5, 210, 100]} rotation={[0, Math.PI / 2, 0]}>
+            {Array.from({length: 20}).map((_, index) => (
+                <mesh key={`connection_section_4_${index}`} position={[0, -15 - 1.2 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>
             ))}
         </group>
-        <group name='section-5' position={[15, 10, 100]} rotation={[0, Math.PI / 2, 0]}>
-            {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_5_${index}`} position={[0, -15 - 4 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
+        <group name='section-5' position={[50.5, 150, 100]} rotation={[0, Math.PI / 2, 0]}>
+            {Array.from({length: 20}).map((_, index) => (
+                <mesh key={`connection_section_5_${index}`} position={[0, -15 - 1.2 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>
             ))}
         </group>
-        <group name='section-6' position={[15, -70, 100]} rotation={[0, Math.PI / 2, 0]}>
-            {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_6_${index}`} position={[0, -15 - 4 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
+        <group name='section-6' position={[50.5, 100, 100]} rotation={[0, Math.PI / 2, 0]}>
+            {Array.from({length: 20}).map((_, index) => (
+                <mesh key={`connection_section_6_${index}`} position={[0, -15 - 1.2 * index, 39.5]} rotation={[Math.PI / 2, 0, 0]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>
             ))}
         </group>
-        <group name='section-7' position={[65, -147.7, 100]} rotation={[0, Math.PI / 2, 0]}>
+        <group name='section-7' position={[95, 34.2, 100]} rotation={[0, Math.PI / 2, 0]}>
             {Array.from({length: 10}).map((_, index) => (
-                <mesh key={`connection_section_7_${index}`} position={[0, 0, 4 * index]}>
+                <mesh key={`connection_section_7_${index}`} position={[0, 0, 1.2 * index]}>
                     <ringGeometry args={[ringInnerRadius, ringOutRadius, 30, 8, 2, 2*Math.PI]} />
                     <meshStandardMaterial color={ringColor} side={DoubleSide} opacity={1} transparent />
                 </mesh>

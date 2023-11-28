@@ -14,26 +14,22 @@ export default Stream2;
 const StreamPath = () => {
   const pathLine = () => {
       const line = new THREE.Path();
-      line.moveTo(-40, 100);
-      Array.from({length: 20}).map((_, index) => {
-      line.lineTo(-40, 100 + index * 2);
+      line.moveTo(50.2, 243);
+      Array.from({length: 10}).map((_, index) => {
+        line.lineTo(50.2, 243 + (253 - 243) / 10 * (index + 1));
       })
-      // line.lineTo(-40, 140);
-      line.quadraticCurveTo(-40, 157, -25, 157)
-      Array.from({length: 32}).map((_, index) => {
-      line.lineTo(-25 + 2 * index, 157);
+      line.quadraticCurveTo(50.2, 260.3, 56, 260.3)
+      Array.from({length: 30}).map((_, index) => {
+        line.lineTo(56 + (84 - 56) / 30 * (index + 1), 260.3);
       })
-      // line.lineTo(40, 157);
-      line.quadraticCurveTo(54.5, 157, 54.5, 140)
-      Array.from({length: 138}).map((_, index) => {
-      line.lineTo(54.5, 140 - index * 2);
+      line.quadraticCurveTo(90, 260.3, 90, 253)
+      Array.from({length: 210}).map((_, index) => {
+        line.lineTo(90, 253 - (253 - 42) / 210 * (index + 1));
       })
-      // line.lineTo(54.5, -135);
-      line.quadraticCurveTo(54.5, -148, 65, -148);
-      Array.from({length: 18}).map((_, index) => {
-      line.lineTo(65 + 2 * index, -148);
+      line.quadraticCurveTo(90, 34, 95.5, 34)
+      Array.from({length: 15}).map((_, index) => {
+        line.lineTo(95.5 + (110 - 95.5) / 15 * (index + 1), 34);
       })
-      // line.lineTo(100, -148);
 
       return line;
   }
@@ -60,7 +56,7 @@ const MoveAnim = ({ points }) => {
   useEffect(() => {
     const timerA = setInterval(() => {
         setAIndex(prev => prev + 1);      
-    }, 10)
+    }, 15)
     return () => clearInterval(timerA);
   }, [])
 
@@ -77,10 +73,10 @@ const MoveAnim = ({ points }) => {
   return (
     <group>
       {aIndex !== points.length - 1 &&
-        <Trail width={30} length={60} color={'lightblue'} attenuation={(t) => t * t} decay={aIndex < 3 ? 10000 : 10} local={false} stride={0} interval={1}>
+        <Trail width={20} length={60} color={'green'} attenuation={(t) => t * t} decay={aIndex < 3 ? 10000 : 10} local={false} stride={0} interval={1}>
           <mesh ref={ref_1}>
-            <sphereGeometry args={[1]} />
-            <meshBasicMaterial color={'lightblue'} />
+            <sphereGeometry args={[0.5]} />
+            <meshBasicMaterial color={'green'} />
           </mesh>
         </Trail>
       }

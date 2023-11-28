@@ -11,3 +11,10 @@
     right: 20px;
     z-index: 999;
 }
+
+.view-connection {
+    position: fixed;
+    top: 180px;
+    right: 20px;
+    z-index: 999;
+}

@@ -11,7 +11,7 @@ const Ground = () => {
     cellColor: '#727C71',
     sectionSize: 75,
     sectionThickness: 1,
-    sectionColor: interiorView ? '#727C71' : '#33642E',
+    sectionColor: '#FFFFFF',
     fadeDistance: 1500,
     fadeStrngth: 5,
     followCamera: true,
