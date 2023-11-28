@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './style.css'
 
@@ -10,8 +10,16 @@ import Model5 from './Model5'
 import Model6 from './Model6'
 import Model7 from './Model7'
 import Connection from './Connection'
+import { useDispatch } from 'react-redux'
+import { setIsLoaded } from '../../../redux/reducer'
 
-const Model = () => {    
+const Model = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setIsLoaded(true));
+  }, [])
+  
   return (
     <group castShadow receiveShadow>
       <Model1 />

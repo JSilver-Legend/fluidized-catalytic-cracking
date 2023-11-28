@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+    isLoaded: false,
     modelIndex: 0,
     interiorView: false,
     connectionState: 1,
@@ -19,9 +20,12 @@ const modelConfigSlice = createSlice({
         setConnectionState: (state, action) => {
             state.connectionState = action.payload;
         },
+        setIsLoaded: (state, action) => {
+            state.isLoaded = action.payload
+        }
     }
 })
 
-export const { setModelIndex, setInteiorView, setConnectionState } = modelConfigSlice.actions
+export const { setModelIndex, setInteiorView, setConnectionState, setIsLoaded } = modelConfigSlice.actions
 
 export default modelConfigSlice.reducer

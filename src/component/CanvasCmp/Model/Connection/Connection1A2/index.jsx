@@ -8,12 +8,13 @@ import ConnectionModel from './ConnectionModel'
 const Connection1A2 = () => {
   const modelIndex = useSelector((state) => state.modelConfig.modelIndex);
   const connectionState = useSelector((state) => state.modelConfig.connectionState);
+  const interiorView = useSelector((state) => state.modelConfig.interiorView);
 
   return (
     <group castShadow receiveShadow>
       {(modelIndex === 0) && <ConnectionModel />}
       {(modelIndex === 0 && connectionState === 1) &&  (<Stream1 />)}
-      {(modelIndex === 0 && connectionState === 2) &&  (<Stream2 />)}
+      {(modelIndex === 0 && connectionState === 2 && interiorView) &&  (<Stream2 />)}
     </group>
   )
 }
