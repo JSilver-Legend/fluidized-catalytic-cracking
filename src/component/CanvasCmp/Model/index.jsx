@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
-import './style.css'
+import { setIsLoaded } from '../../../redux/reducer'
 
 import Model1 from './Model1'
 import Model2 from './Model2'
@@ -10,8 +11,8 @@ import Model5 from './Model5'
 import Model6 from './Model6'
 import Model7 from './Model7'
 import Connection from './Connection'
-import { useDispatch } from 'react-redux'
-import { setIsLoaded } from '../../../redux/reducer'
+
+import './style.css'
 
 const Model = () => {
   const dispatch = useDispatch();
